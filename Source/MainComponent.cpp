@@ -23,25 +23,32 @@ MainContentComponent::~MainContentComponent()
 void MainContentComponent::paint (Graphics& g)
 {
     ArazGraph* graph = new ArazGraph(getLocalBounds(), "My Measurements", "Freq(Hz)", "db");
-	ArazGraphDataset* leftEarData = new ArazGraphDataset("Left", Colours::green);
-    for (int i = 0; i < 5000; i += 10)
+    Random* rnd = new Random();
+
+    for (int j = 0; j < 100; j += 10)
     {
-        leftEarData->append(new ArazGraphPoint(i, 50 * sin(i / 200.0)));
+        ArazGraphDataset* leftEarData = new ArazGraphDataset("Left", 
+            Colour::fromRGB(rnd->nextFloat()*0xff, rnd->nextFloat() * 0xff, rnd->nextFloat() * 0xff));
+        for (int i = 0; i < 5000; i += 10)
+        {
+            leftEarData->append(new ArazGraphPoint(i, j * sin(i / 200.0)));
+        }
+        graph->append(leftEarData);
     }
-	graph->append(leftEarData);
 	
 	ArazGraphDataset* rightEarData = new ArazGraphDataset("Right", Colours::red);
-	rightEarData->append(new ArazGraphPoint(0, 0));
-	rightEarData->append(new ArazGraphPoint(100, 10));
-	rightEarData->append(new ArazGraphPoint(500, 35));
-	rightEarData->append(new ArazGraphPoint(1000, 25));
-	rightEarData->append(new ArazGraphPoint(2000, 20));
+	rightEarData->append(new ArazGraphPoint(   0, 10));
+	rightEarData->append(new ArazGraphPoint( 100, 10));
+	rightEarData->append(new ArazGraphPoint( 500, 10));
+	rightEarData->append(new ArazGraphPoint(1000, 10));
+	rightEarData->append(new ArazGraphPoint(2000, 10));
 	rightEarData->append(new ArazGraphPoint(5000, 10));
 	graph->append(rightEarData);
 
 	graph->paint(g);
 
     delete graph;
+    delete rnd;
 }
 
 void MainContentComponent::resized()

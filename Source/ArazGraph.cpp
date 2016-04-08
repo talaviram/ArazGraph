@@ -119,8 +119,8 @@ void ArazGraph::paint(Graphics& g)
 	}
 	int dx = (maxX - minX) / 10;
 	int dy = (maxY - minY) / 10;
-	float scaleX = regionGraph.getWidth() / ((maxX - minX) * 1.10);
-	float scaleY = regionGraph.getHeight() / ((maxY - minY) * 1.10);
+	float scaleX = regionGraph.getWidth() / ((maxX == minX ? 0.001 : maxX - minX) * 1.10);
+	float scaleY = regionGraph.getHeight() / ((maxY == minY ? 0.001 : maxY - minY) * 1.10);
 
 	// draw points
 	dataset = datasets->get();
