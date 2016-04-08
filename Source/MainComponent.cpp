@@ -24,12 +24,10 @@ void MainContentComponent::paint (Graphics& g)
 {
     ArazGraph* graph = new ArazGraph(getLocalBounds(), "My Measurements", "Freq(Hz)", "db");
 	ArazGraphDataset* leftEarData = new ArazGraphDataset("Left", Colours::green);
-	leftEarData->append(new ArazGraphPoint(0, 0));
-	leftEarData->append(new ArazGraphPoint(100, 10));
-	leftEarData->append(new ArazGraphPoint(500, 30));
-	leftEarData->append(new ArazGraphPoint(1000, 20));
-	leftEarData->append(new ArazGraphPoint(2000, 10));
-	leftEarData->append(new ArazGraphPoint(5000, 10));
+    for (int i = 0; i < 5000; i += 10)
+    {
+        leftEarData->append(new ArazGraphPoint(i, 50 * sin(i / 200.0)));
+    }
 	graph->append(leftEarData);
 	
 	ArazGraphDataset* rightEarData = new ArazGraphDataset("Right", Colours::red);
