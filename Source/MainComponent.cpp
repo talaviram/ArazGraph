@@ -45,7 +45,16 @@ void MainContentComponent::paint (Graphics& g)
 	rightEarData->append(new ArazGraphPoint(5000, 10));
 	graph->append(rightEarData);
 
-	graph->paint(g);
+    ArazGraphDataset* centreData = new ArazGraphDataset("Centre", Colours::yellow);
+    centreData->append(new ArazGraphPoint(   0, 40));
+    centreData->append(new ArazGraphPoint( 100, 40));
+    centreData->append(new ArazGraphPoint( 500, 40));
+    centreData->append(new ArazGraphPoint(1000, 40));
+    centreData->append(new ArazGraphPoint(2000, 40));
+    centreData->append(new ArazGraphPoint(5000, 40));
+    graph->append(centreData);
+
+    graph->paint(g);
 
     delete graph;
     delete rnd;
