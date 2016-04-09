@@ -40,4 +40,5 @@ void MainContentComponent::paint(Graphics& g)
 
 ## screenshots
 
-[https://github.com/arabed/ArazGraph/blob/master/Screenshot/Screenshot_1.png]
+(https://github.com/arabed/ArazGraph/blob/master/Screenshot/Screenshot_1.png)
+
