@@ -4,7 +4,7 @@
 
 This is a simple data plotter graph class for JUCE.
 
-I used VisualStudio 2015 to compile the code. Ut since JUCE is crossplatfom tyou should be able to compile it in any supported enviromnet. 
+I used VisualStudio 2015 to compile the code. But since JUCE is a cross-platform library, you should be able to compile it in any supported environment.
 
 You need only the 'ArazGraph.h' and 'ArazGraph.cpp' files to be able to use the ArazGraph class to plot multiple datasets.
 
