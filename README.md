@@ -1,4 +1,40 @@
 # ArazGraph
-Simple Graph Class for JUCE
-Author: Ara Bedrossian
-Date: April 2016
+## Author: Ara Bedrossian
+## Date: April 2016
+
+This is a simple data plotter graph class for JUCE.
+
+I used VisualStudio 2015 to compile the code. Ut since JUCE is crossplatfom tyou should be able to compile it in any supported enviromnet. 
+
+You need only the 'ArazGraph.h' and 'ArazGraph.cpp' files to be able to use the ArazGraph class to plot multiple datasets.
+
+# example
+There is an example of usage in 'Source/MainComponent.cpp' file.
+
+```
+void MainContentComponent::paint (Graphics& g)
+{
+    ArazGraph* graph = new ArazGraph(getLocalBounds(), "My Measurements", "Freq(Hz)", "db");
+	
+	ArazGraphDataset* leftEarData = new ArazGraphDataset("Left", Colours::red);
+	leftEarData->append(new ArazGraphPoint(   0, 10));
+	leftEarData->append(new ArazGraphPoint( 500, 20));
+	leftEarData->append(new ArazGraphPoint(1000, 30));
+	leftEarData->append(new ArazGraphPoint(5000, 10));
+	graph->append(leftEarData);
+
+	ArazGraphDataset* rightEarData = new ArazGraphDataset("Right", Colours::red);
+	rightEarData->append(new ArazGraphPoint(   0, 15));
+	rightEarData->append(new ArazGraphPoint( 500, 25));
+	rightEarData->append(new ArazGraphPoint(1000, 35));
+	rightEarData->append(new ArazGraphPoint(5000, 15));
+	graph->append(rightEarData);
+
+    graph->paint(g);
+
+    delete graph;
+    delete rnd;
+}
+```
+
+# screen shots
