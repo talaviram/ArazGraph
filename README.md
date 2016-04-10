@@ -42,3 +42,4 @@ void MainContentComponent::paint(Graphics& g)
 
 ![Screenshot 1](https://github.com/arabed/ArazGraph/blob/master/Screenshot/Screenshot_1.png)
 
+![Screenshot 2](https://github.com/arabed/ArazGraph/blob/master/Screenshot/Screenshot_2.png)
