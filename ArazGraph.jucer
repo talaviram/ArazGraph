@@ -2,9 +2,12 @@
 
 <JUCERPROJECT id="Sw2Fit" name="ArazGraph" projectType="guiapp" version="1.0.0"
               bundleIdentifier="com.yourcompany.ArazGraph" includeBinaryInAppConfig="1"
-              jucerVersion="4.1.0">
+              jucerVersion="5.0.2" displaySplashScreen="1" reportAppUsage="1"
+              splashScreenColour="Dark">
   <MAINGROUP id="HVgSZO" name="ArazGraph">
     <GROUP id="{A3EE8593-3BCF-4C9E-5913-5C707EC5145A}" name="Source">
+      <FILE id="BwUUBs" name="ArazGraph.cpp" compile="1" resource="0" file="Source/ArazGraph.cpp"/>
+      <FILE id="BoDjTO" name="ArazGraph.h" compile="0" resource="0" file="Source/ArazGraph.h"/>
       <FILE id="UdbDlN" name="MainComponent.cpp" compile="1" resource="0"
             file="Source/MainComponent.cpp"/>
       <FILE id="f9ACuO" name="MainComponent.h" compile="0" resource="0" file="Source/MainComponent.h"/>
@@ -20,21 +23,42 @@
                        isDebug="0" optimisation="3" targetName="ArazGraph"/>
       </CONFIGURATIONS>
       <MODULEPATHS>
-        <MODULEPATH id="juce_core" path="../../../juce-grapefruit-windows/modules"/>
-        <MODULEPATH id="juce_events" path="../../../juce-grapefruit-windows/modules"/>
-        <MODULEPATH id="juce_graphics" path="../../../juce-grapefruit-windows/modules"/>
-        <MODULEPATH id="juce_data_structures" path="../../../juce-grapefruit-windows/modules"/>
-        <MODULEPATH id="juce_gui_basics" path="../../../juce-grapefruit-windows/modules"/>
-        <MODULEPATH id="juce_gui_extra" path="../../../juce-grapefruit-windows/modules"/>
-        <MODULEPATH id="juce_cryptography" path="../../../juce-grapefruit-windows/modules"/>
-        <MODULEPATH id="juce_video" path="../../../juce-grapefruit-windows/modules"/>
-        <MODULEPATH id="juce_opengl" path="../../../juce-grapefruit-windows/modules"/>
-        <MODULEPATH id="juce_audio_basics" path="../../../juce-grapefruit-windows/modules"/>
-        <MODULEPATH id="juce_audio_devices" path="../../../juce-grapefruit-windows/modules"/>
-        <MODULEPATH id="juce_audio_formats" path="../../../juce-grapefruit-windows/modules"/>
-        <MODULEPATH id="juce_audio_processors" path="../../../juce-grapefruit-windows/modules"/>
+        <MODULEPATH id="juce_core" path="../../../JUCE/modules/"/>
+        <MODULEPATH id="juce_events" path="../../../JUCE/modules/"/>
+        <MODULEPATH id="juce_graphics" path="../../../JUCE/modules/"/>
+        <MODULEPATH id="juce_data_structures" path="../../../JUCE/modules/"/>
+        <MODULEPATH id="juce_gui_basics" path="../../../JUCE/modules/"/>
+        <MODULEPATH id="juce_gui_extra" path="../../../JUCE/modules/"/>
+        <MODULEPATH id="juce_cryptography" path="../../../JUCE/modules/"/>
+        <MODULEPATH id="juce_video" path="../../../JUCE/modules/"/>
+        <MODULEPATH id="juce_opengl" path="../../../JUCE/modules/"/>
+        <MODULEPATH id="juce_audio_basics" path="../../../JUCE/modules/"/>
+        <MODULEPATH id="juce_audio_devices" path="../../../JUCE/modules/"/>
+        <MODULEPATH id="juce_audio_formats" path="../../../JUCE/modules/"/>
+        <MODULEPATH id="juce_audio_processors" path="../../../JUCE/modules/"/>
       </MODULEPATHS>
     </VS2015>
+    <XCODE_MAC targetFolder="Builds/MacOSX">
+      <CONFIGURATIONS>
+        <CONFIGURATION name="Debug" isDebug="1" optimisation="1" targetName="ArazGraph"/>
+        <CONFIGURATION name="Release" isDebug="0" optimisation="3" targetName="ArazGraph"/>
+      </CONFIGURATIONS>
+      <MODULEPATHS>
+        <MODULEPATH id="juce_video" path="../../../JUCE/modules/"/>
+        <MODULEPATH id="juce_opengl" path="../../../JUCE/modules/"/>
+        <MODULEPATH id="juce_gui_extra" path="../../../JUCE/modules/"/>
+        <MODULEPATH id="juce_gui_basics" path="../../../JUCE/modules/"/>
+        <MODULEPATH id="juce_graphics" path="../../../JUCE/modules/"/>
+        <MODULEPATH id="juce_events" path="../../../JUCE/modules/"/>
+        <MODULEPATH id="juce_data_structures" path="../../../JUCE/modules/"/>
+        <MODULEPATH id="juce_cryptography" path="../../../JUCE/modules/"/>
+        <MODULEPATH id="juce_core" path="../../../JUCE/modules/"/>
+        <MODULEPATH id="juce_audio_processors" path="../../../JUCE/modules/"/>
+        <MODULEPATH id="juce_audio_formats" path="../../../JUCE/modules/"/>
+        <MODULEPATH id="juce_audio_devices" path="../../../JUCE/modules/"/>
+        <MODULEPATH id="juce_audio_basics" path="../../../JUCE/modules/"/>
+      </MODULEPATHS>
+    </XCODE_MAC>
   </EXPORTFORMATS>
   <MODULES>
     <MODULE id="juce_audio_basics" showAllCode="1" useLocalCopy="0"/>
@@ -52,4 +76,7 @@
     <MODULE id="juce_video" showAllCode="1" useLocalCopy="0"/>
   </MODULES>
   <JUCEOPTIONS/>
+  <LIVE_SETTINGS>
+    <OSX/>
+  </LIVE_SETTINGS>
 </JUCERPROJECT>
